@@ -19,15 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             fetch(newEndpoint, {
                 method: 'POST',
-                body: formData,
-                mode: 'no-cors'
+                body: formData
             })
             .then(response => {
+                if (!response.ok) {
+                    // For Google Apps Script, it might not return a standard error response,
+                    // but we'll log it if it does. The catch block is more likely to handle it.
+                    console.error('Server responded with an error:', response.status);
+                    throw new Error('Form submission failed.');
+                }
+                // Assuming the request was successful even with an opaque response
                 console.log('Form submission request sent.');
                 if (successBox) {
                     const formWrapper = form.querySelector('.t-form__inputsbox');
                     if (formWrapper) {
-                       form.style.display = 'none';
+                       formWrapper.style.display = 'none'; // Hide inputs, not the whole form
                     }
                     successBox.style.display = 'block';
                 }
