@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const newEndpoint = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhLOZ5S2ZBENfXzA78AHFQa3KgQHXsUVzhmiM9NGwZIm88Xs8hUDVmJJ2ELiHp58JG_i5ZLkvX0CVcyIvfchQR6URWBSNNVFlnbZYv8dgU2TGfMYWZOGqumEhMGssX4czPXPPNntFPde2D1L8ZzZleqCE8StwxqCoCnTviW1eWqn-5PFhoBGKP4mk5mbzHvD3WxSW7o_0wdkLO_CWtduTo8mRbyVMgeFvew0UT2WWVNn2iiT_EGQeyiEu6D0mMaUqoRtNUEeVaE5vt_Op1YNERVor6LqQ&lib=MK7LzoLag-LySUGtoYyCVBGAGFOlNCMp3';
+    const newEndpoint = 'https://script.google.com/macros/s/AKfycbwieKpPvNnWQLNMwyHwxJXWGQ0aiAJh64I57qb7YlKyIceFF8Z5JbV-zQuJGYBqb4pE/exec';
 
     document.body.addEventListener('submit', function(event) {
         const form = event.target;
