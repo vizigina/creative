@@ -10318,59 +10318,6 @@
     </a></div> <!-- Stat -->
   
   <script src="js/custom-form-handler.js"></script>
-  <style>
-    /* Hide right form instruction heading */
-    #rec830306661 .tn-elem[data-elem-id="1735614459759"] { display: none !important; }
-
-    /* In the right form block, hide all input fields/titles/errors but keep the submit button */
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-form__inputsbox,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-input-group,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-input-block,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-input,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-input-title,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-form__errorbox-middle,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-form__errorbox-bottom {
-      display: none !important;
-    }
-    /* Keep the submit button visible */
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-form__submit,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-submit,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] button,
-    #rec830306661 .tn-elem[data-elem-id="1735614733442"] .t-btn {
-      display: inline-flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-  </style>
-  <script>
-    // Convert the right form's submit button action to scroll to footer with Telegram link
-    (function() {
-      function initFooterScrollButton() {
-        var formBlock = document.querySelector('#rec830306661 .tn-elem[data-elem-id="1735614733442"]');
-        if (!formBlock) return;
-        var btn = formBlock.querySelector('.t-form__submit button, .t-form__submit .t-submit, button.t-submit, .t-submit');
-        if (!btn) return;
-        // Ensure it won't try to submit the form
-        try { btn.type = 'button'; } catch (e) {}
-        btn.addEventListener('click', function(e) {
-          if (e) e.preventDefault();
-          var target = document.querySelector('#rec864279489');
-          if (target && target.scrollIntoView) {
-            try { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { target.scrollIntoView(); }
-            try { history.pushState(null, '', '#rec864279489'); } catch (e) {}
-          } else {
-            // Fallback to hash navigation
-            window.location.hash = '#rec864279489';
-          }
-        }, { once: false });
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initFooterScrollButton);
-      } else {
-        initFooterScrollButton();
-      }
-    })();
-  </script>
 </body>
 
 </html>
